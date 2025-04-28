@@ -1,5 +1,5 @@
 import React from 'react';
-import virat from '../assets/virat-kohli.jpg';
+import virat from '../assets/Virat-Kohli.jpg';
 import sahil from '../assets/s.jpeg';
 import kfc from '../assets/kfc.png';
 import messi from '../assets/messi.jpeg';

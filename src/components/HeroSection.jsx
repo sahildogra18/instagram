@@ -4,7 +4,7 @@ import { TbLocationShare } from 'react-icons/tb';
 import { FaHeart, FaRegHeart } from 'react-icons/fa6';
 import { FaRegBookmark } from 'react-icons/fa';
 import { HiOutlineDotsVertical } from 'react-icons/hi';
-import virat from '../assets/virat-kohli.jpg';
+import virat from '../assets/s.jpeg';
 
 function HeroSection() {
   let [isLiked, setIsLiked] = useState(false);
@@ -29,7 +29,7 @@ function HeroSection() {
               onDoubleClick={likeHandler}
             />
             <div>
-              <p>virat_18</p>
+              <p>sahil_dogra</p>
             </div>
           </div>
           <div>
