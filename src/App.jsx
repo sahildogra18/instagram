@@ -12,13 +12,17 @@ import HeroSection from './components/HeroSection';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AllHome from './components/AllHome';
 import Comments from './components/Comments';
+import Shoping from './components/Shoping';
+import DetailsForm from './components/DetailsForm';
 export default function App() {
   return (
-    <div className="h-100vh w-100vw bg-white">
+    <div>
       <Router>
         <Routes>
           <Route path="/" element={<AllHome />} />
           <Route path="/comment" element={<Comments />} />
+          <Route path="/shop" element={<Shoping />} />
+          <Route path="/detailfrom" element={<DetailsForm />} />
         </Routes>
       </Router>
     </div>

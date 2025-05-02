@@ -3,9 +3,12 @@ import comments from '../data/comments';
 import { FaHeart } from 'react-icons/fa';
 import { AiFillHome } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import virat from '../assets/s.jpeg';
+import { IoMdSend } from 'react-icons/io';
 
 function Comments() {
   const [data, setData] = useState(comments);
+  let [comment, setComment] = useState('looking marvelous 🔥');
 
   const commentLike = id => {
     setData(
@@ -18,6 +21,21 @@ function Comments() {
       })
     );
   };
+
+  function sendComment() {
+    setData([
+      ...data,
+      {
+        id: data.length + 1,
+        username: 'sahil Dogra',
+        comment: comment,
+        likes: 0,
+        timestamp: '1m',
+        profilePic: virat,
+      },
+    ]);
+    setComment('');
+  }
 
   return (
     <div className="w-full h-full bg-gray-800 text-white">
@@ -65,6 +83,23 @@ function Comments() {
             </div>
           );
         })}
+      </div>
+      <div className="flex gap-2 items-center justify-between">
+        <div>
+          <img className="w-8 h-8 border-2 border-white rounded-full" src={virat} alt="" />
+        </div>
+        <input
+          className="mr-14 bg-gray-800 border-none outline-none"
+          type="text"
+          placeholder="Add a comment"
+          value={comment}
+          onChange={e => {
+            setComment(e.target.value);
+          }}
+        />
+        <div onClick={sendComment} className="text-3xl cursor-pointer">
+          <IoMdSend />
+        </div>
       </div>
     </div>
   );

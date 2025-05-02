@@ -6,6 +6,8 @@ import { FaRegBookmark } from 'react-icons/fa';
 import { HiOutlineDotsVertical } from 'react-icons/hi';
 import virat from '../assets/s.jpeg';
 import { Link } from 'react-router-dom';
+import bar from '../assets/bar.jpg';
+import { FaShoppingBag } from 'react-icons/fa';
 function HeroSection() {
   let [isLiked, setIsLiked] = useState(false);
   let [showHeart, setShowHeart] = useState(false);
@@ -23,7 +25,7 @@ function HeroSection() {
   }
   return (
     <>
-      <main className="hero-section h-28 bg-white">
+      <main className="hero-section h-100vh w-100vw bg-white">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img
@@ -48,7 +50,7 @@ function HeroSection() {
           </div>
         </div>
         <div className="relative">
-          <img src={virat} alt="virat" className="mt-2 w-[100vw]" onDoubleClick={likeHandler} />
+          <img src={bar} alt="virat" className="mt-2 w-[100vw]" onDoubleClick={likeHandler} />
           {showHeart ? (
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-heart">
               <FaHeart className="text-white text-6xl" />
@@ -67,8 +69,10 @@ function HeroSection() {
                 <LuMessageCircle />
               </Link>
             </div>
-            <div className="text-1xl cursor-pointer">
-              <TbLocationShare />
+            <div className="text-1xl cursor-pointer hover:w-4 rounded-full p-1">
+              <Link to={'/shop'}>
+                <FaShoppingBag />
+              </Link>
             </div>
           </div>
           <div className="mr-1 text-1xl cursor-pointer">
